@@ -1,0 +1,189 @@
+/*     C  E  N  T  E  R     */
+/*        S  H  A  P  E  S      */
+/*    B  U  T  T  O  N  S    */
+@font-face {
+  font-family: "main-font";
+  src: url("../../fonts/PublicSans-VariableFont_wght.ttf");
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.section-padding {
+  padding-block: 60px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.button-style {
+  padding: 10px 25px;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  color: white;
+  border-radius: 20px;
+}
+.button-style:hover {
+  opacity: 0.7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease all;
+}
+
+body {
+  font-family: "main-font";
+  overflow-x: hidden;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  display: inline-block;
+}
+
+/* nav style */
+nav {
+  position: relative;
+  z-index: 999;
+  background-color: white;
+}
+nav .nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 15px;
+}
+nav .nav-content .nav-list ul li {
+  margin-inline: 7px;
+  color: hsl(233deg, 8%, 62%);
+  position: relative;
+}
+nav .nav-content .nav-list ul li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  transition: 0.3s ease all;
+}
+nav .nav-content .nav-list ul li:hover {
+  color: black;
+}
+nav .nav-content .nav-list ul li:hover::after {
+  width: 100%;
+}
+
+/* header style */
+header {
+  height: 100vh;
+  background-color: hsl(0deg, 0%, 98%);
+}
+header .header-content {
+  display: flex;
+}
+header .header-content .header-content-text {
+  width: 50%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-content .header-content-text .header-text h2 {
+  font-size: 56px;
+  line-height: 75px;
+  margin-block: 10px;
+  font-weight: 300;
+}
+header .header-content .header-content-text .header-text p {
+  font-size: 20px;
+  line-height: 25px;
+  margin-block: 10px;
+  color: hsl(233deg, 8%, 62%);
+}
+header .header-content .header-content-text .header-text .header-button {
+  width: 100%;
+  margin-block: 30px;
+}
+header .header-content .header-content-design {
+  width: 70%;
+}
+header .header-content .header-content-design .header-design {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/bg-intro-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+header .header-content .header-content-design .header-design img {
+  width: 100%;
+  position: absolute;
+  right: -15%;
+  top: -15%;
+}
+
+/* features style */
+.features {
+  background-color: hsl(220deg, 16%, 96%);
+}
+.features .container .features-content .features-title {
+  margin-block: 20px 80px;
+}
+.features .container .features-content .features-title h3 {
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-block: 20px;
+}
+.features .container .features-content .features-title p {
+  color: hsl(233deg, 8%, 62%);
+  line-height: 25px;
+}
+.features .container .features-content .features-items {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.features .container .features-content .features-items .item {
+  width: 25%;
+}
+.features .container .features-content .features-items .item h3 {
+  margin-block: 30px;
+  font-weight: 300;
+}
+.features .container .features-content .features-items .item p {
+  color: hsl(233deg, 8%, 62%);
+  line-height: 25px;
+}
+
+.articles {
+  background-color: hsl(0deg, 0%, 98%);
+}
+.articles .container .articles-content .articles-items {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.articles .container .articles-content .articles-items .item {
+  width: 25%;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.articles .container .articles-content .articles-items .item img {
+  width: 100%;
+  max-height: 50%;
+}/*# sourceMappingURL=style.css.map */

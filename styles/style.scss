@@ -1,0 +1,176 @@
+@use 'scss-items/mixins' as *;
+@use 'scss-items/vars' as *;
+@use 'scss-items/classes' as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.3s ease all;
+}
+body {
+    font-family: 'main-font';
+    overflow-x: hidden;
+}
+button {
+    outline: none;
+    border: none;
+}
+
+ul {
+    list-style-type: none;
+    li {
+        display: inline-block
+    }
+}
+
+/* nav style */
+nav {
+    position: relative;
+    z-index: 999;
+    background-color: white;
+    .nav-content{
+        @include flexible(space-between);
+        padding-block: 15px;
+        .nav-list{
+            ul{
+                li{
+                    margin-inline:7px;
+                    color:hsl(233, 8%, 62%);
+                    position: relative;
+                    &:after{
+                        content:'';
+                        position: absolute;
+                        left: 0;
+                        bottom: -15px;
+                        height: 2px;
+                        width: 0%;
+                        background: linear-gradient(to right, $main-color, $second-color);
+                        transition: 0.3s ease all;
+                    }
+                    &:hover {
+                        color:black;
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* header style */
+header {
+    height: 100vh;
+    background-color: $light-background;
+        .header-content {
+            display: flex;
+            .header-content-text{
+                width: 50%;
+                margin-left: 10%;
+                @include flexible(center);
+                .header-text{
+                    h2 {
+                        font-size: 56px;
+                        line-height:75px;
+                        margin-block: 10px;
+                        font-weight: 300;
+                    }
+                    p {
+                        font-size: 20px;
+                        line-height: 25px;
+                        margin-block: 10px;
+                        color:hsl(233, 8%, 62%);
+                    }
+                    .header-button {
+                        width: 100%;
+                        margin-block: 30px;
+                    }
+                }
+            }
+            .header-content-design{
+                    width: 70%;
+                    .header-design {
+                        width: 100%;
+                        height: 100vh;
+                        background-image: url('../images/bg-intro-desktop.svg');
+                        @include backgroundOptions;
+                        position: relative;
+                        img {
+                            width: 100%;
+                            position: absolute;
+                            right: -15%;
+                            top:-15%;
+                        }
+                    }
+            }
+        }
+    }
+
+/* features style */
+.features {
+    background-color: $medium-background;
+    .container {
+        .features-content{
+            .features-title {
+                margin-block: 20px 80px;
+                h3 {
+                    font-size: 26px;
+                    letter-spacing: 2px;
+                    margin-block: 20px;
+
+                }
+
+                p{
+                    color:$Grayish-Blue;
+                    line-height: 25px;
+                }
+            }
+            .features-items {
+                display: flex;
+                column-gap: 20px;
+                .item {
+                    width: 25%;
+                    h3 {
+                        margin-block: 30px;
+                        font-weight: 300;
+                    }
+                    p{
+                        color:$Grayish-Blue;
+                        line-height: 25px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.articles{
+    background-color: $light-background;
+    .container{
+        .articles-content{
+
+            .articles-title{
+
+            }
+
+            .articles-items{
+                display: flex;
+                column-gap: 30px;
+                .item{
+                    width:25%;
+                    background-color: white;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        max-height: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+

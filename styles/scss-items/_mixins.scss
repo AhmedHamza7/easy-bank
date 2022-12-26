@@ -1,0 +1,40 @@
+@mixin container($w) {
+    width: $w;
+    margin:auto;
+}
+
+@mixin overlay {
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin backgroundOptions {
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+
+
+/*     C  E  N  T  E  R     */
+
+@mixin flexible($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+
+/*        S  H  A  P  E  S      */
+@mixin circleIcon($dimenshions, $bg) {
+    width:$dimenshions;
+    height: $dimenshions;
+    border-radius: 50%;
+    background-color: $bg;
+}
+
+
+/*    B  U  T  T  O  N  S    */
+
+

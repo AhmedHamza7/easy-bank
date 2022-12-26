@@ -1,0 +1,12 @@
+$main-color:hsl(136, 65%, 51%);
+$second-color:hsl(192, 70%, 51%);
+
+$light-background:hsl(0, 0%, 98%);
+$medium-background:hsl(220, 16%, 96%);
+$dark-background: hsl(233, 26%, 24%);
+$Grayish-Blue: hsl(233, 8%, 62%);
+
+@font-face {
+    font-family: 'main-font';
+    src:url('../../fonts/PublicSans-VariableFont_wght.ttf')
+}

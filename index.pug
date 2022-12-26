@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Easy Bank
+
+        link(rel='stylesheet' href='styles/style.css')
+    body
+        nav
+            .nav-content(class='container')
+                .nav-logo
+                    img(src='images/logo.svg')
+                .nav-list
+                    ul
+                        each val in ['Home', 'About', 'Contact','block', 'Careers']
+                            li.pointer=val
+                .nav-button
+                    button(class='pointer button-style') Request Invite
+
+        header
+            .header-content
+                    .header-content-text
+                        .header-text
+                            h2 Next generation #[br] digital banking
+                            p Take your financial life online. Your Easybank account will be a one-stop-shop 
+                                |for spending, saving, budgeting, investing, and much more.
+                            .header-button
+                                button(class='pointer button-style') Request Invite
+                    .header-content-design
+                        .header-design 
+                            img(src='images/image-mockups.png')
+
+        - var featuresContent = [{srcs: 'images/icon-online.svg',heads: 'Online Banking', text:'We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.'},{srcs: 'images/icon-budgeting.svg',heads: 'Simple Budgeting', text:'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.'},{srcs: 'images/icon-onboarding.svg',heads: 'Fast Onboarding', text:'  See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.'},{srcs: 'images/icon-api.svg',heads: 'Open API', text:'Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.'}]
+        section(class='features section-padding') 
+            .container 
+                .features-content 
+                    .features-title 
+                        h3 Why choose Easybank?
+                        p We leverage Open Banking to turn your bank account into your financial hub. #[br]Control your finances like never before.
+
+                    .features-items 
+                        each val in featuresContent
+                            .item
+                                img(src=val.srcs)
+                                h3 #{val.heads}
+                                p #{val.text}
+
+        - var articlesContent = [{srcs:'images/image-currency.jpg',author:'By Claire Robinson',title:'Receive money in any currency with no fees',text:'  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …'}, {srcs:'images/image-restaurant.jpg',author:'By Wilson Hutton',title:'Treat yourself without worrying about money',text:'Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …'},{srcs:'images/image-plane.jpg',author:'By Wilson Hutton',title:'Take your Easybank card wherever you go',text:'  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …'}, {srcs:'images/image-confetti.jpg',author:'By Claire Robinson',title:'Our invite-only Beta accounts are now live!',text:'Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …'}]
+        section(class='articles section-padding')
+            .container
+                .articles-content 
+                    .articles-title 
+                        h3 Lastet Articles 
+                    
+                    .articles-items
+                        each val in articlesContent 
+                            .item 
+                                img(src=val.srcs)
+                                p#author #{val.author}
+                                h4 #{val.title}
+                                p#details #{val.text}
+                    
+
+
+
