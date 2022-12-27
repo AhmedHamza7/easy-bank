@@ -16,7 +16,9 @@ button {
     outline: none;
     border: none;
 }
-
+a {
+    text-decoration: none;
+}
 ul {
     list-style-type: none;
     li {
@@ -24,7 +26,7 @@ ul {
     }
 }
 
-/* nav style */
+/*====== nav style ======*/
 nav {
     position: relative;
     z-index: 999;
@@ -60,7 +62,7 @@ nav {
     }
 }
 
-/* header style */
+/*====== header style ====*/
 header {
     height: 100vh;
     background-color: $light-background;
@@ -108,7 +110,7 @@ header {
         }
     }
 
-/* features style */
+/*======== features style =======*/
 .features {
     background-color: $medium-background;
     .container {
@@ -129,11 +131,19 @@ header {
             }
             .features-items {
                 display: flex;
+                flex-wrap: wrap;
                 column-gap: 20px;
                 .item {
-                    width: 25%;
+                    width: 49%;
+                    margin-bottom: 30px;
+                    border-radius: 30px;
+                    padding:35px;
+
+                    &:hover{
+                        background-color: white;
+                    }
                     h3 {
-                        margin-block: 30px;
+                        margin-block: 15px;
                         font-weight: 300;
                     }
                     p{
@@ -147,27 +157,247 @@ header {
     }
 }
 
+
+/* ===== articles style ====== */
+
 .articles{
-    background-color: $light-background;
-    .container{
-        .articles-content{
-
-            .articles-title{
-
+    background-image: url('../images/articles-background.jpg');
+    @include backgroundOptions;
+    background-attachment: fixed;
+    .overlay {
+        background:linear-gradient(to right ,hsla(136, 65%, 51%, 0.707), hsla(192, 70%, 51%, 0.701));
+        .container{
+            .title{
+                color: white;
             }
-
-            .articles-items{
-                display: flex;
-                column-gap: 30px;
-                .item{
-                    width:25%;
-                    background-color: white;
-                    border-radius: 5px;
-                    overflow: hidden;
-                    img {
-                        width: 100%;
-                        max-height: 50%;
+            .articles-content{
+                .articles-title{
+                    h3 {
+                        font-size: 40px;
+                        font-weight: 300;
+                        margin-bottom: 40px;
+                        color:white;
                     }
+                }
+                .articles-items{
+                    display: flex;
+                    column-gap: 30px;
+                    .item{
+                        width:25%;
+                        background-color: white;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            max-height: 45%;
+                        }
+                        .item-text{
+                            padding:20px;
+                            #author{
+                                color:$Grayish-Blue;
+                                font-size: 14px;
+                            }
+                            h4{
+                                font-size: 18px;
+                                margin-block: 10px;
+                                &:hover{
+                                    color:$main-color;
+                                }
+                            }
+                            #details{
+                                color:$Grayish-Blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    .container{
+        .contact-content{
+            @include container(60%);
+            .input{
+                margin-bottom: 20px;
+                border: 2px solid $second-color;
+                input{
+                    @include inputStyle;
+                }
+            }
+            .text-area{
+                border: 2px solid $second-color;
+                margin-bottom: 40px;
+                textarea{
+                    @include inputStyle;
+                }
+            }
+    }
+}
+}
+/* ======= clients ====== */
+.clients {
+    .container{
+        .clients-content{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            gap: 80px 3%;
+            .item{
+                width: calc(94%/3);
+                cursor: pointer;
+                padding-block: 30px;
+                h4{
+                    font-size: 30px;
+                    margin-block: 15px;
+                    font-weight: 300;
+                }
+                &:hover{
+                    i,h4,p,span {
+                        color:rgb(255, 255, 255) !important;
+                    }
+                }
+            }
+            #amazon{
+                i,h4 {
+                    color:orange
+                }
+                position: relative;
+                z-index: 2;
+                ::after{
+                    @include clientBackground;
+                    background-color: orange;
+                }
+                &:hover{
+                    ::after{
+                        height: 100%;
+                    }
+                }
+            }
+            #apple{
+                position: relative;
+                z-index: 2;
+                ::after{
+                    @include clientBackground;
+                    background-color: rgb(10, 10, 10);
+                }
+                &:hover{
+                    ::after{
+                        height: 100%;
+                    }
+                }
+            }
+            #ps{
+                i,h4 {
+                    color:rgb(0, 83, 185)
+                }
+                position: relative;
+                z-index: 2;
+                ::after{
+                    @include clientBackground;
+                    background-color: rgb(0, 83, 185);
+                }
+                &:hover{
+                    ::after{
+                        height: 100%;
+                    }
+                }
+            }
+            #tiktok{
+                position: relative;
+                z-index: 2;
+                ::after{
+                    @include clientBackground;
+                    background-color: rgb(10, 10, 10);
+                }
+                &:hover{
+                    ::after{
+                        height: 100%;
+                    }
+                }
+            }
+            #twitter{
+                i,h4 {
+                    color:rgb(0, 162, 255)
+                }
+                position: relative;
+                z-index: 2;
+                ::after{
+                    @include clientBackground;
+                    background-color: rgb(0, 162, 255);
+                }
+                &:hover{
+                    ::after{
+                        height: 100%;
+                    }
+                }
+            }
+            #youtube{
+                i,h4 {
+                    color:rgb(208, 0, 0)
+                }
+                position: relative;
+                z-index: 2;
+                ::after{
+                    @include clientBackground;
+                    background-color: rgb(208, 0, 0);
+                }
+                &:hover{
+                    ::after{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ====== footer style ===== */
+.footer {
+    background-color: $dark-background;
+    .container{
+        .footer-content{
+            display: flex;
+            .footer-social{
+                width: 25%;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+                .social{
+                    width: 100%;
+                    i{
+                        color:white;
+                        margin-inline: 5px;
+                        &:hover{
+                            color:$main-color;
+                        }
+                    }
+                }
+            }
+            .footer-list{
+                display: flex;
+                width: 50%;
+                column-gap:20%;
+                ul {
+                    li{
+                        display: block;
+                        color: white;
+                        line-height: 40px;
+                        &:hover{
+                            color:$main-color;
+                        }
+                    }
+                }
+            }
+            .footer-copyright{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-content: space-between;
+                width: 25%;
+                .footer-copyright-text{
+                    color: white;
                 }
             }
         }

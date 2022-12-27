@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Bank</title>
+    <link rel="stylesheet" href="styles/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
@@ -12,12 +14,12 @@
       <div class="nav-content container">
         <div class="nav-logo"><img src="images/logo.svg"></div>
         <div class="nav-list">
-          <ul>
-            <li class="pointer">Home</li>
-            <li class="pointer">About</li>
-            <li class="pointer">Contact</li>
-            <li class="pointer">block</li>
-            <li class="pointer">Careers</li>
+          <ul><a href="#Home">
+              <li class="pointer">Home</li></a><a href="#Features">
+              <li class="pointer">Features</li></a><a href="#Clients">
+              <li class="pointer">Clients</li></a><a href="#Articles">
+              <li class="pointer">Articles</li></a><a href="#Contact">
+              <li class="pointer">Contact</li></a>
           </ul>
         </div>
         <div class="nav-button">
@@ -25,7 +27,7 @@
         </div>
       </div>
     </nav>
-    <header>
+    <header id="Home">
       <div class="header-content">
         <div class="header-content-text">
           <div class="header-text">
@@ -42,8 +44,13 @@
         </div>
       </div>
     </header>
-    <section class="features section-padding"> 
+    <section class="features section-padding" id="Features"> 
       <div class="container"> 
+        <div class="features-title">
+          <div class="title">
+            <h3>Features</h3>
+          </div>
+        </div>
         <div class="features-content"> 
           <div class="features-title"> 
             <h3>Why choose Easybank?</h3>
@@ -70,36 +77,151 @@
         </div>
       </div>
     </section>
-    <section class="articles section-padding">
-      <div class="container">
-        <div class="articles-content"> 
-          <div class="articles-title"> 
-            <h3>Lastet Articles </h3>
+    <section class="clients section-padding" id="Clients">
+      <div class="container"> 
+        <div class="clients-title">
+          <div class="title">
+            <h3>Clients</h3>
           </div>
-          <div class="articles-items">
-            <div class="item"> <img src="images/image-currency.jpg">
-              <p id="author">By Claire Robinson</p>
-              <h4>Receive money in any currency with no fees</h4>
-              <p id="details">  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …</p>
+        </div>
+        <div class="clients-content"> 
+          <div class="item" id="amazon"> 
+            <div class="amazon-icon"> <i class="fa-brands fa-amazon fa-3x"></i></div>
+            <div class="amazon-text">
+              <h4>Amazon</h4>
+              <p>is a success partner.</p><span>We wish you more progress.</span>
             </div>
-            <div class="item"> <img src="images/image-restaurant.jpg">
-              <p id="author">By Wilson Hutton</p>
-              <h4>Treat yourself without worrying about money</h4>
-              <p id="details">Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …</p>
+          </div>
+          <div class="item" id="apple"> 
+            <div class="apple-icon"> <i class="fa-brands fa-apple fa-3x"></i></div>
+            <div class="apple-text">
+              <h4>Apple</h4>
+              <p>is a success partner.</p><span>We wish you more progress.</span>
             </div>
-            <div class="item"> <img src="images/image-plane.jpg">
-              <p id="author">By Wilson Hutton</p>
-              <h4>Take your Easybank card wherever you go</h4>
-              <p id="details">  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …</p>
+          </div>
+          <div class="item" id="ps"> 
+            <div class="ps-icon"> <i class="fa-brands fa-playstation fa-3x"></i></div>
+            <div class="ps-text">
+              <h4>Playstation</h4>
+              <p>is a success partner.</p><span>We wish you more progress</span>
             </div>
-            <div class="item"> <img src="images/image-confetti.jpg">
-              <p id="author">By Claire Robinson</p>
-              <h4>Our invite-only Beta accounts are now live!</h4>
-              <p id="details">Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …</p>
+          </div>
+          <div class="item" id="tiktok"> 
+            <div class="tiktok-icon"> <i class="fa-brands fa-tiktok fa-3x"></i></div>
+            <div class="tiktok-text">
+              <h4>Tiktok</h4>
+              <p>is a success partner.</p><span>We wish you more progress</span>
+            </div>
+          </div>
+          <div class="item" id="twitter"> 
+            <div class="twitter-icon"> <i class="fa-brands fa-twitter fa-3x"></i></div>
+            <div class="twitter-text">
+              <h4>Twitter</h4>
+              <p>is a success partner.</p><span>We wish you more progress</span>
+            </div>
+          </div>
+          <div class="item" id="youtube"> 
+            <div class="youtube-icon"> <i class="fa-brands fa-youtube fa-3x"></i></div>
+            <div class="youtube-text">
+              <h4>Youtube</h4>
+              <p>is a success partner.</p><span>We wish you more progress</span>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section class="articles" id="Articles">
+      <div class="overlay section-padding">
+        <div class="container">
+          <div class="articles-content"> 
+            <div class="articles-title"> 
+              <h3>Latest Articles </h3>
+            </div>
+            <div class="articles-items">
+              <div class="item"> <img src="images/image-currency.jpg">
+                <div class="item-text">
+                  <p id="author">By Claire Robinson</p>
+                  <h4 class="pointer">Receive money in any currency with no fees</h4>
+                  <p id="details">  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …</p>
+                </div>
+              </div>
+              <div class="item"> <img src="images/image-restaurant.jpg">
+                <div class="item-text">
+                  <p id="author">By Wilson Hutton</p>
+                  <h4 class="pointer">Treat yourself without worrying about money</h4>
+                  <p id="details">Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …</p>
+                </div>
+              </div>
+              <div class="item"> <img src="images/image-plane.jpg">
+                <div class="item-text">
+                  <p id="author">By Wilson Hutton</p>
+                  <h4 class="pointer">Take your Easybank card wherever you go</h4>
+                  <p id="details">  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …</p>
+                </div>
+              </div>
+              <div class="item"> <img src="images/image-confetti.jpg">
+                <div class="item-text">
+                  <p id="author">By Claire Robinson</p>
+                  <h4 class="pointer">Our invite-only Beta accounts are now live!</h4>
+                  <p id="details">Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact section-padding" id="Contact">
+      <div class="container"> 
+        <div class="contact-title">
+          <div class="title">
+            <h3>Contact</h3>
+          </div>
+        </div>
+        <div class="contact-content">
+          <div class="input">
+            <input type="text" placeholder="Name">
+          </div>
+          <div class="input">
+            <input type="email" placeholder="Email">
+          </div>
+          <div class="text-area">
+            <textarea name="" id="" cols="30" rows="10">Message</textarea>
+          </div>
+          <div class="contact-button">
+            <button class="button-style">Send Message</button>
+          </div>
+        </div>
+      </div></div>
+    </section></div>
+    <footer class="footer section-padding">
+      <div class="container"> 
+        <div class="footer-content">
+          <div class="footer-social"><img src="images/logo.svg">
+            <div class="social"> <a href=""><i class="fa-brands fa-facebook"></i></a><a href=""><i class="fa-brands fa-twitter"></i></a><a href=""><i class="fa-brands fa-pinterest"></i></a><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="footer-list"> 
+            <ul> 
+              <li class="pointer">About us</li>
+              <li class="pointer">Contact</li>
+              <li class="pointer">Blog</li>
+            </ul>
+            <ul> 
+              <li class="pointer">Careers</li>
+              <li class="pointer">Support</li>
+              <li class="pointer">Privacy Policy</li>
+            </ul>
+          </div>
+          <div class="footer-copyright">
+            <div class="footer-button"> 
+              <button class="pointer button-style">Request Invite </button>
+            </div>
+            <div class="footer-copyright-text"> 
+              <p>© Easybank. All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
