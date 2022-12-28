@@ -11,6 +11,9 @@ html(lang="en")
     body
         //- ======= Nav section ========
         nav
+            input(type="checkbox" id="check")
+            label(for="check" class="checkbtn")
+                img(src='images/icon-hamburger.svg' id='open-nav')
             .nav-content(class='container')
                 .nav-logo
                     img(src='images/logo.svg')
@@ -50,7 +53,7 @@ html(lang="en")
 
                     .features-items 
                         each val in featuresContent
-                            .item
+                            .item(data-aos=val.animate)
                                 img(src=val.srcs)
                                 h3 #{val.heads}
                                 p #{val.text}
@@ -62,14 +65,14 @@ html(lang="en")
                     .title
                         h3 Clients
                 .clients-content 
-                    .item#amazon 
+                    .item#amazon(data-aos='zoom-in-down') 
                         .amazon-icon 
                             i(class="fa-brands fa-amazon fa-3x")
                         .amazon-text
                             h4 Amazon
                             p is a success partner.
                             span We wish you more progress.
-                    .item#apple 
+                    .item#apple(data-aos='zoom-in-up') 
                         .apple-icon 
                             i(class="fa-brands fa-apple fa-3x")
                         .apple-text
@@ -77,28 +80,28 @@ html(lang="en")
                             p is a success partner.
                             span We wish you more progress.
 
-                    .item#ps 
+                    .item#ps(data-aos='zoom-in-right') 
                         .ps-icon 
                             i(class="fa-brands fa-playstation fa-3x")
                         .ps-text
                             h4 Playstation
                             p is a success partner.
                             span We wish you more progress
-                    .item#tiktok 
+                    .item#tiktok(data-aos='zoom-in') 
                         .tiktok-icon 
                             i(class="fa-brands fa-tiktok fa-3x")
                         .tiktok-text
                             h4 Tiktok
                             p is a success partner.
                             span We wish you more progress
-                    .item#twitter 
+                    .item#twitter(data-aos='zoom-in-down') 
                         .twitter-icon 
                             i(class="fa-brands fa-twitter fa-3x")
                         .twitter-text
                             h4 Twitter
                             p is a success partner.
                             span We wish you more progress
-                    .item#youtube 
+                    .item#youtube(data-aos='zoom-in-left') 
                         .youtube-icon 
                             i(class="fa-brands fa-youtube fa-3x")
                         .youtube-text
@@ -107,7 +110,7 @@ html(lang="en")
                             span We wish you more progress
 
         //- ====== articles section ======= 
-        - var articlesContent = [{srcs:'images/image-currency.jpg',author:'By Claire Robinson',title:'Receive money in any currency with no fees',text:'  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …'}, {srcs:'images/image-restaurant.jpg',author:'By Wilson Hutton',title:'Treat yourself without worrying about money',text:'Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …'},{srcs:'images/image-plane.jpg',author:'By Wilson Hutton',title:'Take your Easybank card wherever you go',text:'  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …'}, {srcs:'images/image-confetti.jpg',author:'By Claire Robinson',title:'Our invite-only Beta accounts are now live!',text:'Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …'}]
+        - var articlesContent = [{animate:'fade-down',srcs:'images/image-currency.jpg',author:'By Claire Robinson',title:'Receive money in any currency with no fees',text:'  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …'}, {animate:'fade-left',srcs:'images/image-restaurant.jpg',author:'By Wilson Hutton',title:'Treat yourself without worrying about money',text:'Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …'},{animate:'fade-right',srcs:'images/image-plane.jpg',author:'By Wilson Hutton',title:'Take your Easybank card wherever you go',text:'  The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …'}, {animate:'fade-up-right',srcs:'images/image-confetti.jpg',author:'By Claire Robinson',title:'Our invite-only Beta accounts are now live!',text:'Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …'}]
         section(class='articles'  id='Articles')
             .overlay.section-padding
                 .container
@@ -117,7 +120,7 @@ html(lang="en")
                     
                         .articles-items
                             each val in articlesContent 
-                                .item 
+                                .item(data-aos=val.animate) 
                                     img(src=val.srcs)
                                     .item-text
                                         p#author #{val.author}
@@ -169,6 +172,8 @@ html(lang="en")
                         .footer-copyright-text 
                             p © Easybank. All Rights Reserved
 
+        script(src="https://unpkg.com/aos@next/dist/aos.js")
+        script(src='js/script.js')
         
         
         
