@@ -135,20 +135,20 @@ html(lang="en")
                         h3 Contact
                 div(class="contact-content")
                     .input
-                        input(type="text" placeholder="Name")
+                        input(type="text" placeholder="Name" data-aos='fade-left')
                     .input
-                        input(type="email" placeholder="Email")
+                        input(type="email" placeholder="Email" data-aos='fade-up')
                     .text-area
-                        textarea( name="" id="" cols="30" rows="10") Message
+                        textarea( name="" id="" cols="30" rows="10" data-aos='fade-down') Message
                     .contact-button
-                        button.button-style Send Message
+                        button.button-style(data-aos='fade-down') Send Message
             </div>
         </div>
         //- ======== footer section =======
         footer(class='footer section-padding')
             .container 
                 .footer-content
-                    .footer-social
+                    .footer-social(data-aos='fade-up')
                         img(src='images/logo.svg')
                         .social 
                             a(href="")
@@ -159,14 +159,14 @@ html(lang="en")
                                 i(class="fa-brands fa-pinterest")
                             a(href="")
                                 i(class="fa-brands fa-instagram")
-                    .footer-list 
+                    .footer-list(data-aos='fade-down') 
                         ul 
                             each val in ['About us', 'Contact','Blog']
                                 li.pointer=val
                         ul 
                             each val in ['Careers', 'Support','Privacy Policy']
                                 li.pointer=val
-                    .footer-copyright
+                    .footer-copyright(data-aos='fade-left')
                         .footer-button 
                             button(class='pointer button-style') Request Invite 
                         .footer-copyright-text 

@@ -291,7 +291,7 @@ header .header-content .header-content-design .header-design img {
 @media (max-width: 768px) {
   header .header-content .header-content-text {
     width: 80%;
-    margin-block: 0px 40px;
+    margin-block: 0px 30px;
     text-align: center;
     margin-left: 0%;
   }
@@ -301,6 +301,18 @@ header .header-content .header-content-design .header-design img {
   }
   header .header-content .header-content-text .header-text p {
     line-height: 30px;
+  }
+  header .header-content .header-content-design {
+    width: 100%;
+  }
+  header .header-content .header-content-design .header-design {
+    width: 80%;
+    background-image: url("../images/bg-intro-mobile.svg");
+  }
+  header .header-content .header-content-design .header-design img {
+    width: 120%;
+    right: 5%;
+    top: 0%;
   }
 }
 
