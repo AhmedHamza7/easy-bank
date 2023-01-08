@@ -1,4 +1,8 @@
-AOS.init();
+AOS.init({
+    duration: 700,
+    offset: 70,
+    delay: 100,
+});
 
 
 // Change Scroll Active
@@ -7,7 +11,6 @@ const links = navList.querySelectorAll("a");
 const sections = document.querySelectorAll("section[id]");
 
 window.onload = function(){
-    console.log(links[0]);
     links[0].classList.add('active')
 }
 
