@@ -17,16 +17,16 @@ html(lang="en")
             .nav-content(class='container')
                 .nav-logo
                     img(src='images/logo.svg')
-                .nav-list
+                .nav-list(id='nav-menu')
                     ul
                         each val in ['Home', 'Features', 'Clients','Articles', 'Contact']
-                            a(href='#'+ val)
+                            a(href='#'+ val data-section=val)
                                 li.pointer=val
                 .nav-button
                     button(class='pointer button-style') Request Invite
         
         //-======= Header Section =======
-        header(id='Home')
+        section(class='header' id='Home')
             .header-content
                     .header-content-text
                         .header-text
@@ -48,7 +48,7 @@ html(lang="en")
                         h3 Features
                 .features-content 
                     .features-title 
-                        h3 Why choose Easybank?
+                        h4 Why choose Easybank?
                         p We leverage Open Banking to turn your bank account into your financial hub. #[br]Control your finances like never before.
 
                     .features-items 

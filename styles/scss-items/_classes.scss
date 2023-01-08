@@ -4,8 +4,28 @@
 .container {
     width:80%;
     margin: auto;
+// make it responsive 
+    @media (max-width:992px){
+            width: 90% !important;
+    }
+    @media (max-width:768px){
+        width: 95% !important;
+    }
 }
 
+.active {
+    color:black !important;
+    &:after{
+        content:'';
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        height: 2px;
+        width: 100% !important;
+        background: linear-gradient(to right, $main-color, $second-color);
+        transition: 0.3s ease all;
+    }
+}
 .section-padding {
     padding-block: 60px;
 }
@@ -67,6 +87,7 @@
                 }
             }
             @media (max-width:768px){
+                font-size: 26px;
                 &::before{
                     left: 30%;
                     transform: translateX(-30%);

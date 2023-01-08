@@ -15,12 +15,12 @@
       <label class="checkbtn" for="check"><img src="images/icon-hamburger.svg" id="open-nav"></label>
       <div class="nav-content container">
         <div class="nav-logo"><img src="images/logo.svg"></div>
-        <div class="nav-list">
-          <ul><a href="#Home">
-              <li class="pointer">Home</li></a><a href="#Features">
-              <li class="pointer">Features</li></a><a href="#Clients">
-              <li class="pointer">Clients</li></a><a href="#Articles">
-              <li class="pointer">Articles</li></a><a href="#Contact">
+        <div class="nav-list" id="nav-menu">
+          <ul><a href="#Home" data-section="Home">
+              <li class="pointer">Home</li></a><a href="#Features" data-section="Features">
+              <li class="pointer">Features</li></a><a href="#Clients" data-section="Clients">
+              <li class="pointer">Clients</li></a><a href="#Articles" data-section="Articles">
+              <li class="pointer">Articles</li></a><a href="#Contact" data-section="Contact">
               <li class="pointer">Contact</li></a>
           </ul>
         </div>
@@ -29,7 +29,7 @@
         </div>
       </div>
     </nav>
-    <header id="Home">
+    <section class="header" id="Home">
       <div class="header-content">
         <div class="header-content-text">
           <div class="header-text">
@@ -45,7 +45,7 @@
           <div class="header-design"> <img src="images/image-mockups.png"></div>
         </div>
       </div>
-    </header>
+    </section>
     <section class="features section-padding" id="Features"> 
       <div class="container"> 
         <div class="features-title">
@@ -55,7 +55,7 @@
         </div>
         <div class="features-content"> 
           <div class="features-title"> 
-            <h3>Why choose Easybank?</h3>
+            <h4>Why choose Easybank?</h4>
             <p>We leverage Open Banking to turn your bank account into your financial hub. <br>Control your finances like never before.</p>
           </div>
           <div class="features-items"> 

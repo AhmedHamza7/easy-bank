@@ -3,14 +3,6 @@
     margin:auto;
 }
 
-@mixin overlay {
-    position: absolute;
-    left: 0;
-    top:0;
-    bottom: 0;
-    right: 0;
-}
-
 @mixin backgroundOptions {
     background-size: cover;
     background-position: center ;
@@ -33,15 +25,6 @@
     justify-content: $content;
     align-items: center;
 }
-
-/*        S  H  A  P  E  S      */
-@mixin circleIcon($dimenshions, $bg) {
-    width:$dimenshions;
-    height: $dimenshions;
-    border-radius: 50%;
-    background-color: $bg;
-}
-
 
 /*    B  U  T  T  O  N  S    */
 
